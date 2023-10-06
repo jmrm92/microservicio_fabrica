@@ -90,7 +90,7 @@ public class FabricaController {
      * @param stockPiezas El parámetro "stockPiezas" representa la nueva cantidad de stock de un
      * artículo en particular en una fábrica.
      */
-    @PutMapping (value = "actualizar-stock-piezas/{idFabrica}/{stockPiezas}", consumes = MediaType.APPLICATION_JSON_VALUE)
+    @PutMapping (value = "actualizacion-stock-piezas/{idFabrica}/{stockPiezas}", consumes = MediaType.APPLICATION_JSON_VALUE)
     public void actualizarStockPiezas(@PathVariable("idFabrica") int idFabrica, @PathVariable("stockPiezas") int stockPiezas) {
         servicio.actualizarStockPiezas(idFabrica, stockPiezas);
     }
@@ -102,7 +102,7 @@ public class FabricaController {
      * @param presupuesto El parámetro "presupuesto" es de tipo doble y representa el nuevo valor del
      * presupuesto a actualizar para una fábrica.
      */
-    @PutMapping (value = "actualizar-presupuesto/{idFabrica}/{presupuesto}", consumes = MediaType.APPLICATION_JSON_VALUE)
+    @PutMapping (value = "actualizacion-presupuesto/{idFabrica}/{presupuesto}", consumes = MediaType.APPLICATION_JSON_VALUE)
     public void actualizarPresupuesto(@PathVariable("idFabrica") int idFabrica, @PathVariable("presupuesto") double presupuesto) {
         servicio.actualizarPresupuesto(idFabrica, presupuesto);
     }
@@ -112,7 +112,7 @@ public class FabricaController {
      * 
      * @param idModelo La identificación del modelo que debe optimizarse para la fabricación.
      */
-    @PutMapping (value = "optimizar/{idModelo}", produces = MediaType.APPLICATION_JSON_VALUE)
+    @PutMapping (value = "optimizacion/{idModelo}", produces = MediaType.APPLICATION_JSON_VALUE)
     public void optimizar(@PathVariable("idModelo") int idModelo) {
         servicio.optimizarFabricacionModelo(idModelo);
     }
