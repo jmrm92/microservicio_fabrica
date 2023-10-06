@@ -10,5 +10,8 @@ public interface FabricaService {
     int consultarStockPiezas (int idFabrica);
     void actualizarPresupuesto (int idFabrica, double presupuesto);
     void actualizarStockPiezas (int idFabrica, int stockPiezas);
+    void optimizarFabricacionModelo (int idModelo);
     void nuevaFabrica (Fabrica fabrica);
+    void eliminarFabrica (int idFabrica);
+    List<Fabrica> filtrarPorPresupuesto (double presupuestoMinimo, double presupuestoMaximo);
 }
